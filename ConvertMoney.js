@@ -1,17 +1,50 @@
-let pesoValue = 4300;
+let pesoDolarValue = 4300;
+let pesoEuroValue = 4483;
 
 function convertMoney(money, from, to) {
-    if (money > 0 && from === 'USA' && to === 'COP') {
-        let dolarConverted = Math.round(money) * pesoValue;
-        console.log("The " + money + " dolars in peso is " + dolarConverted)
-    } else if (money > 0 && from === 'COP' && to === 'USA') {
-        let pesoConverted = Math.round(money) / pesoValue;
-        console.log("The " + money + " pesos in dolar is " + pesoConverted)
-    } else if ((from !== '' && money < 0) || (to !== '' && money < 0)) {
+    if (money <= 0) {
         console.log("The value need to be greater than 0");
-    } else if ((from === undefined && money > 0) || (from === '' && money > 0) || (to === undefined && money > 0) || (to === '' && money > 0)) {
-        console.log("The type of 'from' and 'to' need to be different than blank , for example , USA , COP , EUR , etc");
+        return;
     }
+
+    if (!from || !to || from === to) {
+        console.log("The type of 'from' and 'to' need to be different than blank, for example, USA, COP, EUR, etc");
+        return;
+    }
+
+    let conversionRate;
+    switch (from) {
+        case 'USA':
+            conversionRate = pesoDolarValue;
+            break;
+        case 'COP':
+            conversionRate = 1 / pesoDolarValue;
+            break;
+        case 'EUR':
+            conversionRate = pesoEuroValue;
+            break;
+        default:
+            console.log("Invalid 'from' currency");
+            return;
+    }
+
+    let convertedAmount;
+    switch (to) {
+        case 'USA':
+            convertedAmount = money * conversionRate;
+            break;
+        case 'COP':
+            convertedAmount = money / conversionRate;
+            break;
+        case 'EUR':
+            convertedAmount = money * conversionRate;
+            break;
+        default:
+            console.log("Invalid 'to' currency");
+            return;
+    }
+
+    console.log(`The ${money} ${from} in ${to} is ${convertedAmount}`);
 }
 
 convertMoney(100000, 'COP', 'USA');
