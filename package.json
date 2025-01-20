@@ -1,0 +1,14 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "- If you want to run any of the both projects , use node and the name of the JavaScript file from VS Code Console  - These projects were created for the Digital House course to become a JavaScript Developer",
+  "main": "Calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
