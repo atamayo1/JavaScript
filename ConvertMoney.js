@@ -1,4 +1,4 @@
-let pesoDolarValue = 4300;
+let pesoDolarValue = 4333;
 let pesoEuroValue = 4483;
 
 function convertMoney(money, from, to) {
