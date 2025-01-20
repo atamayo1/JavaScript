@@ -8,7 +8,7 @@ function convertMoney(money, from, to) {
     }
 
     if (!from || !to || from === to) {
-        console.log("The type of 'from' and 'to' need to be different than blank, for example, USA, COP, EUR, etc");
+        console.log("The type of 'from' and 'to' need to be different, and different than blank, for example, USA, COP, EUR, etc");
         return;
     }
 
