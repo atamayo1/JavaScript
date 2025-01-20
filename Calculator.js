@@ -42,19 +42,19 @@ console.log("2. Resta");
 console.log("3. Multiplicar");
 console.log("4. Division");
 
-let operation = prompt("Seleccione la operación: ");
+let operation = Number(prompt("Seleccione la operación: "));
 let num1 = Number(prompt("Escriba el numero 1: "));
 let num2 = Number(prompt("Escriba el numero 2: "));
 
 function handleOperation(input) {
     switch (input) {
-        case "1":
+        case 1:
             return suma(num1, num2);
-        case "2":
+        case 2:
             return resta(num1, num2);
-        case "3":
+        case 3:
             return multiplicar(num1, num2);
-        case "4":
+        case 4:
             return dividir(num1, num2);
         default:
             break;
