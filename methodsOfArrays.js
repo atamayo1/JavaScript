@@ -1,4 +1,3 @@
-'use strict';
 // .push()
 console.log("");
 console.log("Push method: ");
