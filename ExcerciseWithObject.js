@@ -15,11 +15,11 @@ persona.ubicacion = {
     numero: "107"
 };
 
-function DeleteFirstItem(item, keyToDelete) {
+function DeleteItem(item, keyToDelete) {
     delete item[keyToDelete];
     return item;
 }
 
-let newObject = DeleteFirstItem(persona, "edad");
+let newObject = DeleteItem(persona, "edad");
 
 console.log(newObject);
