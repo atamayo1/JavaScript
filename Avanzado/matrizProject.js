@@ -4,6 +4,7 @@ let matrizGastos = [
     [20000, 21000, 22000, 23000, 24000, 25000, 26000],  // Semana 3 → Fila 3
     [50000, 51000, 52000, 53000, 54000, 55000, 56000]   // Semana 4 → Fila 4
 ];// Lune   Mart   Mier   Juev   Vier   Saba   Domi
+//   Col1   Col2   Col3   Col4   Col5   Col6   Col7
 
 function calcularGastosPorSemana(matrizGastos, numSemana) {
     if (numSemana < 0 || numSemana >= matrizGastos.length) {
