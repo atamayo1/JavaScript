@@ -12,10 +12,10 @@ function calcularGastosPorSemana(matrizGastos, numSemana) {
         return;
     }
     let totalGastos = matrizGastos[numSemana].reduce((acc, gasto) => acc + gasto, 0);
-    console.log(`Gastos de Semana ${numSemana + 1}: $${totalGastos}`);
+    console.log(`Gastos de Semana ${numSemana}: $${totalGastos}`);
 }
 
-calcularGastosPorSemana(matrizGastos, 0);
+calcularGastosPorSemana(matrizGastos, 2);
 
 function calcularGastosPorDia(matrizGastos, numDia) {
     let dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
@@ -39,7 +39,7 @@ calcularGastosDelMes(matrizGastos);
 
 function calcularGastosPorSemanaCallBack(matrizGastos, callback) {
     let totalGastosPorSemana = matrizGastos.map((semana, i) =>
-        `Semana ${i + 1}: $${semana.reduce((acc, gasto) => acc + gasto, 0)}`
+        `Semana ${i}: $${semana.reduce((acc, gasto) => acc + gasto, 0)}`
     );
     callback(totalGastosPorSemana);
 }
