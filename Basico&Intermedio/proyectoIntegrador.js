@@ -1,10 +1,26 @@
 // Array para almacenar tareas
 let prompt = require("prompt-sync")({ sigint: true });
 let tareas = [];
+let categoriasNombres = [
+    "Trabajo",
+    "Personal",
+];
+
+function mostratTodasLasCategorias() {
+    categoriasNombres.forEach((categoria, indice) => {
+        console.log(indice + ": " + categoria);
+    });
+}
+
+function agregarNuevaCategoriaPorElUsuario(nombreCategoria) {
+    categoriasNombres.push(nombreCategoria);
+    console.log("Categoría " + nombreCategoria + " agregada correctamente");
+}
 
 // Agregar tarea
 function agregarTarea(nameRequest, limitDateRequest = null) {
     tareas.push({ name: nameRequest, complete: false, limitDate: limitDateRequest });
+    console.log("Tarea agregada correctamente")
 }
 
 // Eliminar tarea
@@ -45,6 +61,8 @@ function mostrarMenu() {
     console.log("3. Marcar tarea como completada");
     console.log("4. Modificar tarea");
     console.log("5. Mostrar todas las tareas");
+    console.log("6. Ver todas las categorias");
+    console.log("7. Agregar nueva categoria");
     console.log("0. Salir");
 }
 
@@ -78,6 +96,13 @@ function interactuarConUsuario() {
             case 5:
                 console.log(" -- Lista de tareas -- ")
                 console.log(tareas)
+                break;
+            case 6:
+                mostratTodasLasCategorias();
+                break;
+            case 7:
+                let newNameCategory = prompt("Ingrese el nombre de la nueva categoria a agregar: ");
+                agregarNuevaCategoriaPorElUsuario(newNameCategory);
                 break;
             default:
                 break;
