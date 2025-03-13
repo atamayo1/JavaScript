@@ -1,8 +1,8 @@
 // BubbleSort
 function bubbleSort(array = []) {
-    for (let i = 0; i < array.length - 1; i++) {
-        for (let j = 0; j < array.length - 1 - i; j++) {
-            if (array[j] < array[j + 1]) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[j] > array[j + 1]) {
                 let temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
@@ -12,7 +12,7 @@ function bubbleSort(array = []) {
     console.log("Ordered", array)
 }
 
-bubbleSort([1, 2, 3, 4, 5]);
+bubbleSort([8, 4, 2, 9, 5, 7, 85, 1, 3]);
 
 // Ordenamiento si es Ascendente o no
 function checkOrderAsc(array = []) {
