@@ -11,8 +11,8 @@ function bubbleSort(array = []) {
     }
     console.log("Ordered", array)
 }
-
-bubbleSort([8, 4, 2, 9, 5, 7, 85, 1, 3]);
+const newArrayBubble = [8, 4, 2, 9, 5, 7, 85, 1, 3];
+bubbleSort(newArrayBubble);
 
 // Ordenamiento si es Ascendente o no
 function checkOrderAsc(array = []) {
@@ -24,8 +24,8 @@ function checkOrderAsc(array = []) {
     }
     console.log("Ascending", array);
 }
-
-checkOrderAsc([1, 2, 3, 4, 5]);
+const newArrayToCheck = [1, 2, 3, 4, 5];
+checkOrderAsc(newArrayToCheck);
 
 // Contar cantidad de veces que aparece un numero en un array
 function countNumber(numero = 0, array = []) {
@@ -37,8 +37,9 @@ function countNumber(numero = 0, array = []) {
     }
     console.log(`El numero de veces que se repite el numero ${numero} es: ${count} veces`);
 }
-
-countNumber(2, [1, 2, 2, 3, 4, 5, 6, 2, 7, 8, 9]);
+const numberToCount = 2;
+const arrayToCount = [1, 2, 2, 3, 4, 5, 6, 2, 7, 8, 9];
+countNumber(numberToCount, arrayToCount);
 
 // Obtener votos dependiendo del nombre del tema
 function getVotesByName(name = "", array = [{ name: "", votes: 0 }]) {
@@ -51,11 +52,12 @@ function getVotesByName(name = "", array = [{ name: "", votes: 0 }]) {
     }
     console.log("Los votos del nombre del tema '" + name + "' son: " + votes + " votos")
 }
-
-getVotesByName("segun quien", [
+const nameToCheckVotes = "segun quien";
+const arrayToCheckVotes = [
     { name: "que mas puedo pedir", votes: 10 },
     { name: "te extraño", votes: 7 },
     { name: "eres", votes: 5 },
     { name: "el amor de mi vida", votes: 9 },
     { name: "segun quien", votes: 9 }
-])
+];
+getVotesByName(nameToCheckVotes, arrayToCheckVotes);
